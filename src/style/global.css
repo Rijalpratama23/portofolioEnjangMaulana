@@ -318,6 +318,7 @@ header #hamburger-menu:hover {
 .gambar-skills {
     display: flex;
     gap: 50px;
+    flex-wrap: wrap;
 }
 .gambar-skills .card {
     background-color: white;
