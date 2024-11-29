@@ -1,0 +1,777 @@
+:root {
+    --bg: #222222;
+    --var: rgb(220, 220, 33);
+    --bgvar: #333333;
+    --white: #ffffff;
+}
+* {
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+}
+body {
+    font-family: 'Montserrat';
+}
+
+/* Header style */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--bg);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 1.8rem 10%;
+    height: 1.8rem;
+    border-bottom: 2px solid red;
+    box-shadow: 5px;
+}
+.paragrap-hero h1, h3 {
+    font-size: 1.7rem;
+}
+header .logo a{
+    font-weight: bold;
+    color: var(--white);
+    width: 80px;
+    height: 80px;
+    text-decoration: none;
+    font-size: 28px;
+    font-weight: bold;
+    color: red;
+}
+span {
+    color: red;
+}
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav ul {
+    display: flex;
+    gap: 2rem;
+    transition: .3s;
+}
+nav ul li {
+    list-style-type: none;
+}
+nav ul li a {
+    text-decoration: none;
+    color: var(--white);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+.home {
+    color: red;
+}
+nav ul li a:hover  {
+    color: red;
+    transition: .3s ease-in-out;
+    border-bottom: 1px solid red;
+}
+nav ul li a:active {
+    color: var(--white);
+}
+header #hamburger-menu {
+    color: var(--white);
+    font-size: 1.2rem;
+    display: none;
+}
+header #hamburger-menu:hover {
+    color: red;
+    transition: .3s ease-in-out;
+    cursor: pointer;
+}
+
+/* HERO STAR */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.4rem 7%;
+    background-color: rgb(202, 202, 202);
+    color: black;
+}
+.gambar-hero img {
+    border-radius: 100%;
+    height: 320px;
+    width: 330px;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px 10px red;
+    animation: imageflow  4s ease-in-out infinite;
+}
+@keyframes imageflow {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-2.4rem);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+.gambar-hero img:hover {
+    border-radius: 50px;
+    transition: .5s all;
+}
+
+/* CSS to Write/ketikan */
+.paragrap-hero {
+    line-height: 1.6rem;
+}
+.paragrap-hero .span {
+    position: relative;
+}
+.paragrap-hero .span::before {
+    content: "MarketingExecutive";
+    color: red;
+    animation: words 20s infinite;
+}
+.paragrap-hero .span::after {
+    content:" ";
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    background-color: rgb(202, 202, 202);
+    border-left: 2px solid var(--var);
+    right: -8px;
+    animation: cursor .8s infinite, typing 20s steps(14) infinite;
+}
+@keyframes cursor {
+    to {
+        border-left: 2px solid var(--var);
+    }
+}
+@keyframes words {
+    0%,20% {
+        content: "MarketingExecutive";
+    }
+    21%,40% {
+        content: "field sales";
+    }
+}
+@keyframes typing {
+    10%,15%,30%,35%,50%,55%,70%,75%,90%,95% {
+        width: 0;
+    }
+    5%,20%,25%,40%,45%,60%,65%,80%,85%{
+        width: calc(100% + 8px); 
+    }
+}
+
+.paragrap-hero h4 {
+    font-size: 1.7rem;
+}
+.paragrap-hero h1 {
+    font-size: 1.9rem;
+    line-height: 2rem
+}
+.sosial-media {
+    display: flex;
+}
+.sosial-media a {
+    text-decoration: none;
+    font-size: 1.7rem;
+    color: black;
+    display: flex;
+}
+.sosial-media a:hover {
+    color: red;
+    border-radius: 100%;
+}
+.sosial-media a i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.2rem;
+    width: 20%
+}
+/* END HERO */
+
+/* ABOUT STAR */
+.about {
+    min-height: 100vh;
+    color: var(--white);
+    padding: 7rem 7% 1.4rem;
+    background-color: var(--bg);
+}
+.about h2 {
+    text-align: center;
+    font-weight: bold;
+}
+.about .content-about {
+    display: flex;
+    padding: 3rem 4% 2rem;
+}
+.about .paragrap-about {
+    display: block;
+    padding: 1rem 7% 1.3rem;
+    line-height: 1.3rem;
+}
+.exsperiences {
+    border: 2px solid red;
+}
+.exsperiences .container-exs {
+    padding: 20px;
+}
+.content-about figure img{
+    border-radius: 100%;
+    height: 320px;
+    width: 330px;
+    box-shadow: 0px 4px 8px 10px red ;
+    animation: gambarAbout 4s ease-in-out infinite;
+}
+.content-about .exsperiences {
+    margin: 20px;
+    border-radius: 10px;
+}
+@keyframes gambarAbout {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-2.4rem);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+.about figure img:hover {
+    border-radius: 50px;
+    transition: .5s all;
+}
+.paragrap-about .hereme-about{
+    background-color: red;
+    text-align: center;
+    margin: 45px;
+    width: 150px;
+    padding: 12px;
+    border-radius: 15px;
+}
+.paragrap-about .hereme-about a {
+    color: black
+}
+.paragrap-about .hereme-about:hover {
+    background-color: white;
+    font-weight: bold;
+}
+.hereme-about a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+.hereme-about a:hover {
+    font-weight: 9000;
+    color: rgba(13, 90, 255, 0.942);
+}
+/* END ABOUT */
+
+/* my Works */
+.skills {
+    min-height: 100vh;
+    background-color: rgb(202, 202, 202);
+    padding: 7rem 7% 1.4rem;
+}
+.skills h2 {
+    text-align: center;
+    color: black;
+    font-weight: bold;
+}
+.content-skills .paragrap-skills {
+    text-align: center;
+    color: black;
+    padding: 1.3rem;
+    background-color: black;
+    color: white;
+    border-radius: 12px;
+    margin: 20px;
+    border: 2px solid red;
+}
+.content-skills .paragrap-skills:hover {
+    border: 2px solid red;
+    background-color: #333333;
+    cursor: pointer;
+}
+.content-skills .hereme-skills {
+    background-color: red;
+    margin: 45px auto;
+    padding: 12px;
+    border-radius: 15px;
+    text-align: center;
+    width: 170px;
+    font-weight: bold;
+    font-size: 20px;
+}
+.content-skills .hereme-skills:hover {
+    background-color: white;
+    transition: .3s;
+}
+.gambar-skills {
+    display: flex;
+    gap: 50px;
+}
+.gambar-skills .card {
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+}
+.gambar-skills .card:hover {
+    border: 2px solid red;
+    cursor: pointer;
+}
+.gambar-skills .html, .css, .python, 
+.php, .javaScript, .bootsrap {
+    animation: mengambang 4s ease-in-out infinite;
+}
+@keyframes mengambang {
+    0% {
+        transform: translateY(2);
+    }
+    50% {
+        transform: translateY(-2.4rem);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+.hereme-skills a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--bg);
+}
+.hereme-skills a:hover {
+    color: blue;
+}
+/* END SKILL */
+
+/* STAR EDUCATION */
+.education {
+    min-height: 100vh;
+    background-color: var(--bg);
+    padding: 7rem 7% 1.4rem
+}
+.education h2 {
+    text-align: center;
+    font-weight: bold;
+    color: var(--white);
+}
+.container-education .card-body{
+    background-color: black;
+    color: white;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.container-education .card-body:hover {
+    border: 2px solid red;
+}
+.education .paragraf-education {
+    color: white;
+    text-align: center;
+    margin: 30px;
+    background-color: black;
+    border-radius: 15px;
+    border: 2px solid red;
+    padding: 10px;
+}
+.education .paragraf-education:hover {
+    background-color: #222222;
+    color: white;
+    cursor: pointer;
+    transition: .3s;
+}
+.education .container-education {
+    padding: 5rem 7% 1.4rem;
+    color: var(--white);
+}
+.container-education .content-utama {
+    display: flex;
+    justify-content: space-between;
+}
+.content-utama .content img {
+    border-radius: 15px;
+    width: 200px;
+    height: 167px;
+}
+.content-utama .content {
+    display: flex;
+    border: 1px solid var(--var);
+    box-sizing: border-box;
+    margin: 15px;
+    border-radius: 15px;
+    box-shadow: 0px 2px 4px 6px rgb(116, 116, 1);
+}
+.content-utama .content .asset {
+    display: inline-block;
+    justify-content: space-between;
+    padding: 20px;
+}
+.container-education .linkdetail {
+    margin: 5rem 5% 1.3rem;
+    display: flex;
+    padding: 12px;
+    justify-content: space-between;
+}
+.linkdetail .smk a span {
+    color: black;
+}
+.linkdetail .univers a span {
+    color: black;
+}
+.container-education .linkdetail 
+.smk a {
+    display: inline;
+    justify-content: left;
+    text-decoration: none;
+    color: var(--bg);
+    font-weight: bold;
+    background-color: var(--var);
+    padding: 12px;
+    border-radius: 15px;
+}
+.container-education .linkdetail 
+.smk a:hover {
+    color: blue;
+    font-weight: bold;
+}
+.container-education .linkdetail 
+.univers a {
+    display: inline;
+    justify-content: left;
+    text-decoration: none;
+    text-align: center;
+    color: var(--bg);
+    font-weight: bold;
+    background-color: var(--var);
+    padding: 12px;
+    border-radius: 15px;
+}
+.container-education .linkdetail 
+.univers a:hover {
+    color: blue;
+    font-weight: bold;
+}
+/* END EDUCATION */
+
+/* CONTACT STAR */
+.contact {
+    min-height: 100vh;
+    background-color: rgb(202, 202, 202);
+    padding: 7rem 7% 1.6rem;
+    color: black;
+}
+.contact .row {
+    display: flex;
+    margin-top: 2rem;
+    background-color: var(--bg);
+}
+.contact h2 {
+    text-align: center;
+}
+.contact p {
+    text-align: center;
+    padding: 1.6rem;
+}
+.contact .content-contact1 {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.content-contact1 .bungkus-gambar  {
+    display: inline-block;
+    align-items: center;
+    gap: 100px;
+    padding: 28px 15px;
+}
+.bungkus-gambar figure img {
+    border-radius: 15px;
+    border: 2px solid red;
+}
+.icon-contact {
+    display: block;
+    align-items: center;
+}
+.icon-contact .card-email {
+    display: flex;
+    height: 30px;
+    cursor: pointer;
+}
+.icon-contact .card-email:hover {
+    color: red;
+}
+.icon-contact .card-email i {
+    font-size: 23px;
+    margin-top: 26px;
+    cursor: pointer;
+}
+.icon-contact .card-telepon {
+    display: flex;
+    cursor: pointer;
+}
+.icon-contact .card-telepon:hover {
+    color: red;
+}
+.icon-contact .card-telepon i {
+    font-size: 23px;
+    margin-top: 26px;
+    cursor: pointer;
+}
+.login-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+}
+.login-container:hover {
+    border: 2px solid red;
+    border-radius: 15px;
+}
+.login-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.form-group input:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: #888;
+}
+.submit-button {
+    width: 100%;
+    padding: 10px;
+    background: linear-gradient(45deg, #ff4c4c, #ff0000);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+}
+.submit-button:hover {
+    background: linear-gradient(45deg, #ff0000, #ff4c4c);
+}
+/* END CONTACT */
+footer {
+    min-height: 20vh;
+    background-color: var(--bg);
+    color: var(--white);
+}
+footer h4 {
+    text-align: center;
+    padding: 5px;
+}
+footer .btn {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+footer .btn a{
+    text-decoration: none;
+    color: red;
+    margin: 5px;
+}
+footer .btn a i {
+    text-align: center;
+    font-size: 1.6rem;
+}
+footer .btn a i:hover {
+    color: var(--white);
+}
+footer .credit {
+    text-align: center;
+}
+footer .credit a {
+    text-decoration: none;
+    color: red;
+}
+/* END FOOTER */
+
+/* media queris */
+
+/* ini ukuran dekstop */
+@media screen and (max-width: 992px) {
+    body {
+        font-size: 100%;
+    }
+}
+
+/* media queries Tablet */
+@media screen and (max-width: 768px) {
+    nav {
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    header nav ul{
+        flex-direction: column;
+        width: 100%;
+        padding: 40vh 7% 1.6rem;
+        background-color: var(--bg);
+        border-radius: 20px;
+        text-align: center;
+    }
+    nav ul.hidden {
+        display: none;
+    }
+    header #hamburger-menu {
+        display: block;
+        font-size: 1.7rem;
+        font-weight: bold;
+    }
+    .hero {
+        display: inline-block;
+        flex-wrap: wrap;
+        padding: 12rem 30% 1.7rem;
+        align-items: center;
+    }
+    br {
+        display: none;
+    }
+    .hero p {
+        text-align: left;
+        font-size: 20px;
+    }
+    .hero .sosial-media i{
+        text-align: center;
+    }
+    .hero .gambar-hero {
+        text-align: center;
+        padding-top: 8px;
+        margin-top: 30px;
+    }
+    .skills {
+        display: inline-block;
+        justify-content: space-between;
+    }
+    .skills .gambar-skills {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+    }
+    
+    .education .content-utama {
+        flex-wrap: wrap;
+        
+    }
+    .about .content-about {
+        display: flex;
+        padding: 3rem 4% 2rem;
+        flex-wrap: wrap;
+    }
+    .container-education{
+        display: inline-block;
+    }
+    footer {
+        padding: 4rem 3% 1.6rem;
+    }
+}
+
+/* media Queries Mobile/hp */
+@media screen and (max-width: 576px) {
+    body {
+        font-size: 90%;
+    }
+    .hero {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    br {
+        display: none;
+    }
+    .about .content-about {
+        display: block;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+    .content-about figure img{
+        padding: 0px;
+    }
+    .about .content-about {
+        display: flex;
+        padding: 3rem 4% 2rem;
+        flex-wrap: wrap;
+    }
+    .content-about .gambar-about{
+        display: flex;
+        justify-content: start;
+        margin: -12px;
+    }
+    .about .content-about p {
+        text-align: center;
+    }
+    .skills {
+        display: block;
+    }
+    .skills .gambar-skills .html,
+    .css, .javaScript, .bootsrap, .php, .python{
+        width: 200px;
+        text-align: center;
+        font-size: 1.7rem;
+    }
+    .education h2,p,h4{
+        text-align: center;
+    }
+    .content-utama .content {
+        display: block;
+        padding: 30px;
+    }
+    .linkdetail {
+        display: flex;
+        justify-content: center;
+    }
+    .linkdetail .univers {
+        text-align: center;
+    }
+    #container-smk {
+        width: 264px;
+        text-align: start;
+    }
+    .smk span, .univers span {
+        display: none;
+    }
+    .contact .row {
+        display: block;
+        flex-wrap: wrap;
+        border-radius: 15px;
+    }
+    footer {
+        min-height: 8vh;
+    }
+    footer .content-footer {
+        display: block;
+        align-items: start;
+    }
+}
+
+
+
+
+
+
+
+
+
+
